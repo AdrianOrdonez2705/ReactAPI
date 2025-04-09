@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { registerUser, loginUser, getDashboard } from './api';
+import './App.css';
 
 const App = () => {
     const [username, setUsername] = useState('');
@@ -38,7 +39,7 @@ const App = () => {
     };
 
     return (
-        <div>
+        <div className='container'>
             <h1>React UI</h1>
             <input
                 type="text"
@@ -52,9 +53,9 @@ const App = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <button onClick={handleRegister}>Register</button>
+            <button onClick={handleRegister}>Registrar</button>
             <button onClick={handleLogin}>Login</button>
-            <button onClick={handleDashboard}>Access Dashboard</button>
+            <button onClick={handleDashboard}>Ir a Dashboard</button>
             <p>{message}</p>
         </div>
     );
